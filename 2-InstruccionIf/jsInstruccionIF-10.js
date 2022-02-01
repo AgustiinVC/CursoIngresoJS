@@ -1,9 +1,9 @@
 function mostrar()
 {
 	let nota;
-	const max = 11, min = 1;
+	const max = 10, min = 1;
 
-	nota = parseInt(Math.random()*(max - min) + min);
+	nota = Math.round(Math.random()*(max - min) + min);
 
 	if (nota >= 9)
 	{
