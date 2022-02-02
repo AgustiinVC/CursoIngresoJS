@@ -9,25 +9,29 @@ function Rectangulo ()
     let largo;
     let ancho;
     let perimetro;
+    let alambre;
     
     largo = parseInt(document.getElementById("txtIdLargo").value);
     ancho = parseInt(document.getElementById("txtIdAncho").value);
 
-    perimetro = 6 * (ancho + largo);
+    perimetro = 2 * (ancho + largo);
+    alambre = perimetro * 3;
 
-    alert (`Se necesitan ${perimetro} metros de alambre`);
+    alert (`Se necesitan ${alambre} metros de alambre`);
 }
 function Circulo () 
 {
     let radio;
     let perimetro;
-    const PI = 3.14;
+    //const PI = 3.14;
 
     radio = parseInt(document.getElementById("txtIdRadio").value);
 
-    perimetro = 6 * PI * radio;
+    //perimetro = 2 * PI * radio;
+    perimetro = 2 * Math.PI * radio;
+    alambre = 3 * perimetro;
 
-    alert (`Se necesitan ${perimetro} metros de alambre`);
+    alert (`Se necesitan ${alambre.toFixed(2)} metros de alambre`);
 }
 function Materiales () 
 {
@@ -36,15 +40,15 @@ function Materiales ()
     let area;
     let cemento;
     let cal;
-    const CEMENTO_X_METRO = 2;
-    const CAL_X_METRO = 3;
+    const BOLSA_CEMENTO = 2;
+    const BOLSA_CAL = 3;
     
     largo = parseInt(document.getElementById("txtIdLargo").value);
     ancho = parseInt(document.getElementById("txtIdAncho").value);
 
     area = largo * ancho;
-    cemento = CEMENTO_X_METRO * area;
-    cal = CAL_X_METRO * area;
+    cemento = BOLSA_CEMENTO * area;
+    cal = BOLSA_CAL * area;
 
-    alert (`Se necesitan ${cemento} de cemento y ${cal} de cal para un contrapiso de ${area} m2`);
+    alert (`Se necesitan ${cemento} bolsas de cemento y ${cal} bolsas de cal para un contrapiso de ${area} m2`);
 }
