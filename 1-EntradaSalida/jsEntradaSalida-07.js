@@ -9,37 +9,37 @@ ej.: "la Resta es 750"*/
 
 function sumar()
 {	
-	let nro1, nro2, total;
-	nro1 = parseInt(document.getElementById("txtIdNumeroUno").value);
-	nro2 = parseInt(document.getElementById("txtIdNumeroDos").value);
-	total = nro1 + nro2
+	let nroUno, nroDos, total;
+	nroUno = parseInt(document.getElementById("txtIdNumeroUno").value);
+	nroDos = parseInt(document.getElementById("txtIdNumeroDos").value);
+	total = nroUno + nroDos
 	alert(`La suma es ${total}`);
 }
 
 function restar()
 {
-	let nro1, nro2, total;
-	nro1 = parseInt(document.getElementById("txtIdNumeroUno").value);
-	nro2 = parseInt(document.getElementById("txtIdNumeroDos").value);
-	total = nro1 - nro2
+	let nroUno, nroDos, total;
+	nroUno = parseInt(document.getElementById("txtIdNumeroUno").value);
+	nroDos = parseInt(document.getElementById("txtIdNumeroDos").value);
+	total = nroUno - nroDos
 	alert(`La resta es ${total}`);
 }
 
 function multiplicar()
 { 
-	let nro1, nro2, total;
-	nro1 = parseInt(document.getElementById("txtIdNumeroUno").value);
-	nro2 = parseInt(document.getElementById("txtIdNumeroDos").value);
-	total = nro1 * nro2
+	let nroUno, nroDos, total;
+	nroUno = parseInt(document.getElementById("txtIdNumeroUno").value);
+	nroDos = parseInt(document.getElementById("txtIdNumeroDos").value);
+	total = nroUno * nroDos
 	alert(`La multiplicación es ${total}`);
 }
 
 function dividir()
 {
-	let nro1, nro2, total;
-	nro1 = parseInt(document.getElementById("txtIdNumeroUno").value);
-	nro2 = parseInt(document.getElementById("txtIdNumeroDos").value);
-	total = nro1 / nro2
+	let nroUno, nroDos, total;
+	nroUno = parseInt(document.getElementById("txtIdNumeroUno").value);
+	nroDos = parseInt(document.getElementById("txtIdNumeroDos").value);
+	total = nroUno / nroDos
 	alert(`La división es ${total}`);
 }
 
