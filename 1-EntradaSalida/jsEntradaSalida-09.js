@@ -16,3 +16,21 @@ function mostrarAumento()
 
 	document.getElementById("txtIdResultado").value = sueldoNuevo;
 }
+ /*  // Ejercicio 9 Bis % por Prompt
+
+function mostrarAumento()
+{
+	let sueldoViejo;
+	let sueldoNuevo;
+	let aumento;
+	let porcentaje;
+
+	sueldoViejo = parseInt(document.getElementById("txtIdSueldo").value);
+	porcentaje = prompt ("Ingrese el % de aumento");
+	porcentaje = parseInt (porcentaje);
+	
+	aumento = sueldoViejo * porcentaje / 100;
+	sueldoNuevo = sueldoViejo + aumento;
+
+	document.getElementById("txtIdResultado").value = sueldoNuevo;
+}    */
