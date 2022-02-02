@@ -1,7 +1,8 @@
 function mostrar()
 {
 	let nota;
-	const max = 10, min = 1;
+	const max = 10;
+	const min = 1;
 
 	nota = Math.round(Math.random()*(max - min) + min);
 

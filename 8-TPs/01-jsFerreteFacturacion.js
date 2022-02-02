@@ -5,7 +5,10 @@ C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
 {
-	let precioUno, precioDos, precioTres, total;
+	let precioUno;
+    let precioDos;
+    let precioTres;
+    let total;
 
     precioUno = parseInt(document.getElementById("txtIdPrecioUno").value);
     precioDos = parseInt(document.getElementById("txtIdPrecioDos").value);
@@ -17,7 +20,10 @@ function Sumar ()
 }
 function Promedio () 
 {
-    let precioUno, precioDos, precioTres, total;
+    let precioUno;
+    let precioDos;
+    let precioTres;
+    let total;
 
     precioUno = parseInt(document.getElementById("txtIdPrecioUno").value);
     precioDos = parseInt(document.getElementById("txtIdPrecioDos").value);
@@ -29,7 +35,11 @@ function Promedio ()
 }
 function PrecioFinal () 
 {
-    let precioUno, precioDos, precioTres, total, iva;
+    let precioUno;
+    let precioDos;
+    let precioTres;
+    let total;
+    let iva;
     
     precioUno = parseInt(document.getElementById("txtIdPrecioUno").value);
     precioDos = parseInt(document.getElementById("txtIdPrecioDos").value);

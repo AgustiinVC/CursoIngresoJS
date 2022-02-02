@@ -1,6 +1,7 @@
 function mostrar()
 {
-	let edad, estado;
+	let edad;
+	let estado;
 
 	edad = parseInt(document.getElementById("txtIdEdad").value);
 	estado = document.getElementById("estadoCivil").value;
