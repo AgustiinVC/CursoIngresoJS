@@ -31,7 +31,7 @@ function Promedio ()
 
     promedio = (precioUno + precioDos + precioTres)/3;
 
-    alert(`El promedio es de $${promedio}`);
+    alert(`El promedio es de $${promedio.toFixed(2)}`);
 }
 function PrecioFinal () 
 {
@@ -51,5 +51,5 @@ function PrecioFinal ()
 
     precioFinal = suma + iva;
 
-    alert(`El precio final es de $${precioFinal}`);
+    alert(`El precio final es de $${precioFinal.toFixed(2)}`);
 }
