@@ -12,6 +12,7 @@ function mostrar()
 		case "Febrero":
 			alert ("Este mes tiene 28 días.");
 		break;
+		
 		default:
 			alert ("Este mes tiene 31 días.");
 		break;
