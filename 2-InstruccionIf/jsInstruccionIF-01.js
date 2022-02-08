@@ -8,6 +8,7 @@ function mostrar()
 		alert("Niña bonita");
 	}
 }//FIN DE LA FUNCIÓN
+
 /* Otro ejercicio de if
 function mostrar()
 {
