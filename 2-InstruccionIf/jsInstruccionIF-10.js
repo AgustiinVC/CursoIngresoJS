@@ -4,7 +4,7 @@ function mostrar()
 	const max = 10;
 	const min = 1;
 
-	nota = Math.round(Math.random()*(max - min) + min);
+	nota = Math.floor(Math.random()*(max - min) + min);
 
 	if (nota >= 9)
 	{
@@ -17,4 +17,4 @@ function mostrar()
 	else {
 		alert (`Te sacaste un ${nota}. Vamos, la próxima se puede`);
 	}
-}//FIN DE LA FUNCIÓN
+}//FIN DE LA FUNCIÓN Math.floor mas uniforme que Math.round
