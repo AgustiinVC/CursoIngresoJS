@@ -6,11 +6,13 @@ function mostrar()
 
 	switch (destino)
 	{
-		case "Bariloche": case "Ushuaia":
+		case "Bariloche": 
+		case "Ushuaia":
 			alert ("Hace frio.");
 			break;
 		
-		case "Cataratas": case "Mar del plata":
+		case "Cataratas": 
+		case "Mar del plata":
 			alert ("Hace calor.");
 			break;
 	}

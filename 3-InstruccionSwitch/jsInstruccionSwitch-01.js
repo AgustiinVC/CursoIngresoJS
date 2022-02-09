@@ -23,7 +23,6 @@ function mostrar()
 
 		default:
 			alert("Un mes como cualquier otro");
-		break;
 	}
 
 

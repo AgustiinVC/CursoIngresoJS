@@ -5,7 +5,10 @@ function mostrar()
 
 	switch (mes)
 	{
-		case "Abril": case "Junio": case "Septiembre": case "Noviembre":
+		case "Abril": 
+		case "Junio": 
+		case "Septiembre": 
+		case "Noviembre":
 			alert ("Este mes tiene 30 días.");
 		break;
 
@@ -15,7 +18,6 @@ function mostrar()
 		
 		default:
 			alert ("Este mes tiene 31 días.");
-		break;
 	}
 
 

@@ -28,7 +28,6 @@ function mostrar()
 		
 		default:
 			alert ("Falta para el invierno.");
-		break;
 	}
 
 

@@ -11,7 +11,6 @@ function mostrar()
 		
 		default:
 			alert("Este mes tiene 30 o más dias");
-		break;
 	}
 	
 
