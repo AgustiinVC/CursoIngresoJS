@@ -7,4 +7,4 @@ function mostrar()
   nro = Math.floor(Math.random()*(max - min) + min);
 
   alert (`El número aleatorio es ${nro}`);
-}//FIN DE LA FUNCIÓN
+}//FIN DE LA FUNCIÓN Math.round redondea para arriba y .floor para abajo
