@@ -1,6 +1,7 @@
 function mostrar()
 {
 	let nota;
+	let mensaje;
 	const max = 10;
 	const min = 1;
 
@@ -8,13 +9,14 @@ function mostrar()
 
 	if (nota >= 9)
 	{
-		alert (`Te sacaste un ${nota}, EXCELENTE`);
+		mensaje = `Te sacaste un ${nota}, EXCELENTE`;
 	}
 	else if (nota >= 4)
 	{
-		alert (`Te sacaste un ${nota}, APROBÓ`);
+		mensaje = `Te sacaste un ${nota}, APROBÓ`;
 	}
 	else {
-		alert (`Te sacaste un ${nota}. Vamos, la próxima se puede`);
+		mensaje = `Te sacaste un ${nota}. Vamos, la próxima se puede`;
 	}
+	alert (mensaje);
 }//FIN DE LA FUNCIÓN

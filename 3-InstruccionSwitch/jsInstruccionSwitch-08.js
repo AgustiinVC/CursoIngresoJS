@@ -1,6 +1,7 @@
 function mostrar()
 {
 	let destino;
+	let mensaje;
 	
 	destino = document.getElementById("txtIdDestino").value;
 
@@ -8,12 +9,15 @@ function mostrar()
 	{
 		case "Bariloche": 
 		case "Ushuaia":
-			alert ("Hace frio.");
+			mensaje = "Hace frio.";
 			break;
 		
 		case "Cataratas": 
 		case "Mar del plata":
-			alert ("Hace calor.");
+			mensaje = "Hace calor.";
 			break;
 	}
+
+	alert (mensaje);
+
 }//FIN DE LA FUNCIÓN

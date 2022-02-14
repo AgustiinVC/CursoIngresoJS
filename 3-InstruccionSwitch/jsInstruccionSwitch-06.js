@@ -1,6 +1,7 @@
 function mostrar()
 {
 	let hora;
+	let mensaje;
 
 	hora = parseInt (document.getElementById("txtIdHora").value);
 	
@@ -11,7 +12,7 @@ function mostrar()
 		case 9: 
 		case 10:
 		case 11:
-			alert ("Es de mañana.");
+			mensaje = "Es de mañana.";
 			break;
 		
 		case 12: 
@@ -22,7 +23,7 @@ function mostrar()
 		case 17: 
 		case 18: 
 		case 19:
-			alert ("Es de tarde.");
+			mensaje = "Es de tarde.";
 			break;
 		
 		case 20: 
@@ -37,13 +38,14 @@ function mostrar()
 		case 4: 
 		case 5: 
 		case 6:
-			alert ("Es de noche.");
+			mensaje = "Es de noche.";
 			break;
 			
 		default:
-			alert ("La hora no existe.");
+			mensaje = "La hora no existe.";
 	}
 
+	alert (mensaje);
 
 }//FIN DE LA FUNCIÓN}
 
@@ -57,22 +59,23 @@ function mostrar()
 	
 	if ( hora >= 7 && hora <= 11)
 	{
-		alert ("Es de mañana.");
+		mensaje = "Es de mañana.";
 	}
 
 	else if (hora >= 12 && hora <= 19)
 	{
-		alert ("Es de tarde.");
+		mensaje = "Es de tarde.";
 	}
 
 	else if ( (hora >= 20 && hora <= 24) || (hora >= 0 && hora <= 6) )
 	{
-		alert ("Es de noche.");
+		mensaje = "Es de noche.";
 	}	
 
 	else
 	{
-		alert ("La hora no existe.");
+		mensaje = "La hora no existe.";
 	}
-			
+	
+	alert (mensaje);
 } */

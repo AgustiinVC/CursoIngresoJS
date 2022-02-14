@@ -1,29 +1,31 @@
 function mostrar()
 {
 	let mes;
+	let mensaje;
+
 	mes = document.getElementById("txtIdMes").value;
 
 	switch (mes)
 	{
 		case "Enero":
-			alert("Que comiences bien el año!!!");
-		break;
+			mensaje = "Que comiences bien el año!!!";
+			break;
 		
 		case "Marzo":
-			alert("A clases!!!");
-		break;
+			mensaje = "A clases!!!";
+			break;
 
 		case "Julio":
-			alert("Se vienen las vacaiones");
-		break;
+			mensaje = "Se vienen las vacaiones";
+			break;
 
 		case "Diciembre":
-			alert("Felices fiestas!!!");
-		break;
+			mensaje = "Felices fiestas!!!";
+			break;
 
 		default:
-			alert("Un mes como cualquier otro");
+			mensaje = "Un mes como cualquier otro";
 	}
-
+	alert (mensaje);
 
 }//FIN DE LA FUNCIÓN
