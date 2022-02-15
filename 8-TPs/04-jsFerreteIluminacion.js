@@ -9,7 +9,8 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
+//Solo con If
+ function CalcularPrecio () 
 {
  	let marca;
     let cantidad;
@@ -82,4 +83,252 @@ function CalcularPrecio ()
         mensaje = "El precio final es de: $" + precio.toFixed(2);
     }
     document.getElementById("txtIdprecioDescuento").value = mensaje;
+} 
+
+/* //Solo con Switch
+function CalcularPrecio () 
+{
+ 	let marca;
+    let cantidad;
+    let precio;
+    let impuesto;
+    let descuento;
+    let mensaje;
+    const PRECIO_X_LAMPARA = 35;
+
+    cantidad = parseInt (document.getElementById("txtIdCantidad").value);
+    marca = document.getElementById("Marca").value;
+
+    switch (cantidad)
+    {
+        case 1:
+        case 2:
+            descuento = 0;
+            break;
+        
+        case 3:
+            switch (marca)
+            {
+                case "ArgentinaLuz":
+                    descuento = 15;
+                    break;
+                
+                    case "FelipeLamparas":
+                    descuento = 10;
+                    break;
+                
+                default:
+                    descuento = 5;
+            }
+            break;
+            
+        case 4:
+            switch (marca)
+            {
+                case "ArgentinaLuz":
+                case "FelipeLamparas":
+                    descuento = 25;
+                    break;
+                    
+                default:
+                    descuento = 20;
+            }
+            break;
+
+        case 5:
+            switch (marca)
+            {
+                case "ArgentinaLuz":
+                    descuento = 40;
+                    break;
+                    
+                default:
+                    descuento = 30;
+            }
+            break;
+        
+        default:
+            descuento = 50;
+    }
+    
+    precio = (PRECIO_X_LAMPARA * cantidad) * (1 - descuento / 100);
+
+    if (precio > 120)
+    {
+        impuesto = precio * 10/ 100;
+        precio += impuesto;
+        mensaje = "El precio final es de: $" + precio.toFixed(2) + ". Usted pago $" + impuesto.toFixed(2) + " de IIBB."  
+    }
+    else if (precio == 0)
+    {
+        mensaje = "No compro ninguna lampara.";
+    }
+    else 
+    {
+        mensaje = "El precio final es de: $" + precio.toFixed(2);
+    }
+    document.getElementById("txtIdprecioDescuento").value = mensaje;
 }
+*/
+
+/* //Switch + If
+function CalcularPrecio () 
+{
+ 	let marca;
+    let cantidad;
+    let precio;
+    let impuesto;
+    let descuento;
+    let mensaje;
+    const PRECIO_X_LAMPARA = 35;
+
+    cantidad = parseInt (document.getElementById("txtIdCantidad").value);
+    marca = document.getElementById("Marca").value;
+
+    switch (cantidad)
+    {
+        case 1:
+        case 2:
+            descuento = 0;
+            break;
+        
+        case 3:
+            if (marca == "ArgentinaLuz")
+            {
+                descuento = 15;
+            }
+            else if (marca == "FelipeLamparas")
+            {
+                descuento = 10; 
+            }
+            else 
+            {
+                descuento = 5;
+            }
+            break;
+            
+        case 4:
+            if (marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+            {
+                descuento = 25;
+            }
+            else 
+            {
+                descuento = 20;
+            }
+            break;
+
+        case 5:
+            if (marca == "ArgentinaLuz")
+            {
+                descuento = 40;
+            }
+            else 
+            {
+                descuento = 30;
+            }
+            break;
+        
+        default:
+            descuento = 50;
+    }
+    
+    precio = (PRECIO_X_LAMPARA * cantidad) * (1 - descuento / 100);
+
+    if (precio > 120)
+    {
+        impuesto = precio * 10/ 100;
+        precio += impuesto;
+        mensaje = "El precio final es de: $" + precio.toFixed(2) + ". Usted pago $" + impuesto.toFixed(2) + " de IIBB."  
+    }
+    else if (precio == 0)
+    {
+        mensaje = "No compro ninguna lampara.";
+    }
+    else 
+    {
+        mensaje = "El precio final es de: $" + precio.toFixed(2);
+    }
+    document.getElementById("txtIdprecioDescuento").value = mensaje;
+}
+*/
+
+/* // if + switch
+ function CalcularPrecio () 
+{
+ 	let marca;
+    let cantidad;
+    let precio;
+    let impuesto;
+    let descuento;
+    let mensaje;
+    const PRECIO_X_LAMPARA = 35;
+
+    cantidad = parseInt (document.getElementById("txtIdCantidad").value);
+    marca = document.getElementById("Marca").value;
+
+    if (cantidad >= 6)
+    {
+        descuento = 50;
+    }
+    else if (cantidad == 5)
+    {
+        switch (marca)
+        {
+            case "ArgentinaLuz":
+                descuento = 40;
+                break;
+                    
+            default:
+                descuento = 30;
+        }
+    }
+    else if (cantidad == 4)
+    {
+        switch (marca)
+        {
+            case "ArgentinaLuz":
+            case "FelipeLamparas":
+                descuento = 25;
+                break;
+                    
+            default:
+                descuento = 20;
+        }
+    }
+    else if (cantidad == 3)
+    {
+        switch (marca)
+        {
+            case "ArgentinaLuz":
+                descuento = 15;
+                break;
+                
+            case "FelipeLamparas":
+                descuento = 10;
+                break;
+                
+            default:
+                descuento = 5;
+        }
+    }
+    else 
+    {
+        descuento = 0;
+    }
+
+    precio = (PRECIO_X_LAMPARA * cantidad) * (1 - descuento / 100);
+
+    if (precio > 120)
+    {
+        impuesto = precio * 10/ 100;
+        precio += impuesto;
+        mensaje = "El precio final es de: $" + precio.toFixed(2) + ". Usted pago $" + impuesto.toFixed(2) + " de IIBB."
+        
+    }
+    else 
+    {
+        mensaje = "El precio final es de: $" + precio.toFixed(2);
+    }
+    document.getElementById("txtIdprecioDescuento").value = mensaje;
+} */

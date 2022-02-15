@@ -15,7 +15,7 @@ function mostrar()
 		case "Invierno":
 			if (destino == "Bariloche")
 			{
-				aumento =  20 / 100;
+				aumento =  20;
 			}
 			else if (destino == "Mar del plata")
 			{
