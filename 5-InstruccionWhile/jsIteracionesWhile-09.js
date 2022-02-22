@@ -8,6 +8,8 @@ function mostrar()
 	let maximo = 0;
 	let minimo = 0;
 	let flag = 0;
+	let mensajeMaximo;
+	let mensajeMinimo;
 
 	respuesta = prompt ("¿Quiere ingresar un número?");
 	respuesta = respuesta.toLowerCase();
@@ -34,34 +36,22 @@ function mostrar()
 			minimo = numeroIngresado;
 		}
 		
-		respuesta = prompt ("¿Quiere ingresar otro un número?");
+		respuesta = prompt ("¿Quiere ingresar otro número?");
 		respuesta = respuesta.toLowerCase();
 	}
 
-	document.getElementById ("txtIdMaximo").value = "El número máximo es: " + maximo;
-	document.getElementById ("txtIdMinimo").value = "El número máximo es: " + minimo;
+	if (flag == 0)
+	{
+		mensajeMaximo = "No hay máximos porque no ingresaste nada."
+		mensajeMinimo = "No hay mínimos porque no ingresaste nada";
+	}
+	else 
+	{
+		mensajeMaximo = "El número máximo es: " + maximo;
+		mensajeMinimo = "El número máximo es: " + minimo;
+	}
+
+	document.getElementById ("txtIdMaximo").value = mensajeMaximo;
+	document.getElementById ("txtIdMinimo").value = mensajeMinimo;
 
 }//FIN DE LA FUNCIÓN
-
-
-/*
-function mostrar()
-{	// declarar variables
-	var banderaDelPrimero;
-	var numeroIngresado;
-	var numeroMaximo;
-	var numeroMinimo;
-	var respuesta;
-	//iniciar variables
-	banderaDelPrimero="es el primero";
-	respuesta='si';
-	while(respuesta=="si")
-	{
-		
-		respuesta=prompt("desea continuar?");
-	}
-	txtIdMaximo.value=numeroMaximo;
-	txtIdMinimmo.value=numeroMinimo;
-}
-
-*/

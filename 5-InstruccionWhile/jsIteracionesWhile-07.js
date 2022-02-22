@@ -9,26 +9,37 @@ function mostrar()
 	let suma = 0;
 	let promedio = 0;
 	let numeroIngresado;
+	let mensajeSuma;
+	let mensajePromedio;
 
-	do
+	respuesta = prompt ("¿Quiere ingresar un número?");
+	respuesta = respuesta.toLowerCase ();
+
+	while (respuesta == "si")
 	{
+		numeroIngresado = prompt ("Ingrese un número:");
+		numeroIngresado = parseInt (numeroIngresado);
+
+		suma += numeroIngresado;
 		contador++;
 
-		respuesta = prompt ("¿Quiere ingresar un número?");
+		respuesta = prompt ("¿Quiere ingresar otro número?");
 		respuesta = respuesta.toLowerCase ();
-		if (respuesta == "si")
-		{
-			numeroIngresado = prompt ("Ingrese el número");
-			numeroIngresado = parseInt (numeroIngresado);
-
-			suma += numeroIngresado;
-		}
 	}
-	while (respuesta == "si")
-	
-	promedio = suma / contador;
 
-	document.getElementById ("txtIdSuma").value = "La suma es: " + suma;
-	document.getElementById ("txtIdPromedio").value = "El promedio de " + contador + " números es: " + promedio;
+	if (contador == 0)
+	{
+		mensajeSuma = "No hay suma porque no ingresaste nada."
+		mensajePromedio = "No se puede calcular el promedio";
+	}
+	else 
+	{
+		promedio = suma / contador;
+		mensajeSuma = "La suma es: " + suma;
+		mensajePromedio = "El promedio de " + contador + " números es: " + promedio;
+	}
+
+	document.getElementById ("txtIdSuma").value = mensajeSuma;
+	document.getElementById ("txtIdPromedio").value = mensajePromedio;
 
 }//FIN DE LA FUNCIÓN

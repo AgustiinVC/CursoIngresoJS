@@ -5,8 +5,8 @@ function mostrar()
 	let promedio = 0;
 	let numerosIngresados;
 	const CANTIDAD_NUMEROS = 5;
-
-	do
+	
+	while (contador < CANTIDAD_NUMEROS)
 	{
 		numerosIngresados = prompt("Ingrese el Número");
 		numerosIngresados = parseInt (numerosIngresados);
@@ -15,8 +15,7 @@ function mostrar()
 
 		suma += numerosIngresados;
 	}
-	while (contador < CANTIDAD_NUMEROS);
-
+	
 	promedio = suma / contador;
 
 	document.getElementById ("txtIdSuma").value = "La suma es: " + suma;
@@ -32,6 +31,7 @@ function mostrar()
 	let promedio = 0;
 	let numerosIngresados;
 	let numerosIngresadosParseado = 0;
+	const CANTIDAD_NUMEROS = 5;
 
 	do
 	{
@@ -48,7 +48,7 @@ function mostrar()
 			suma += numerosIngresadosParseado;
 		}
 	}
-	while (contador <5);
+	while (contador < CANTIDAD_NUMEROS);
 
 	promedio = suma / contador;
 
