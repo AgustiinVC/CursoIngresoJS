@@ -6,13 +6,17 @@ function mostrar()
 	let suma = 0;
 	let producto = 1;
 	let respuesta;
-	let numeroIngresado = 0;
+	let numeroIngresado;
 	let flag = 0;
 	let mensajeSuma;
 	let mensajeProducto;
+	let flagNegativos;
+
+	flagNegativos = false;
 
 	respuesta = prompt ("¿Quiere ingresar un número?");
 	respuesta = respuesta.toLowerCase();
+
 	
 	while (respuesta == "si")
 	{
@@ -26,6 +30,7 @@ function mostrar()
 		}
 		else if (numeroIngresado < 0)
 		{
+			flagNegativos = true;
 			producto *= numeroIngresado;
 		}
 
@@ -33,15 +38,21 @@ function mostrar()
 		respuesta = respuesta.toLowerCase();
 	}
 	
+	if (flagNegativos == false)
+	{
+		producto = 0;
+	}
+
 	if (flag == 0)
 	{
 		mensajeSuma = "No hay suma porque no ingresaste nada."
 		mensajeProducto = "No ingresaste ningún número";
 	}
 	else 
-	{
-		mensajeSuma = "La suma es: " + suma;
+	{	
 		mensajeProducto = "El producto de los negativos es: " + producto;
+		mensajeSuma = "La suma es: " + suma;
+		
 	}
 
 	document.getElementById ("txtIdSuma").value = mensajeSuma;

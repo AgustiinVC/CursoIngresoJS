@@ -23,18 +23,18 @@ function mostrar()
     let cantidadCeros = 0;
     let cantidadPares = 0;
 
-    let promedioNegativos = 0;
-    let promedioPositivos = 0;
-    let diferenciaPosNeg = 0;
+    let promedioNegativos;
+    let promedioPositivos;
+    let diferenciaPosNeg;
 
-    let flag = 0;
+    let flag = false;
 
 	respuesta = prompt ("¿Quiere ingresar un número?");
 	respuesta = respuesta.toLowerCase();
 
 	while (respuesta == "si")
 	{
-        flag = 1;
+        flag = true;
 		numeroIngresado = prompt ("Ingrese un número:");
 		numeroIngresado = parseInt (numeroIngresado);
         if (numeroIngresado % 2 == 0)
@@ -61,14 +61,30 @@ function mostrar()
 		respuesta = respuesta.toLowerCase();
 	}
 
-	if (flag == 0)
+    if (cantidadNegativos == 0)
+    {
+        promedioNegativos = 0;
+    }
+    else
+    {
+        promedioNegativos = sumaNegativo / cantidadNegativos;
+    }
+
+    if (cantidadPositivos == 0)
+    {
+        promedioPositivos = 0;
+    }
+    else
+    {
+        promedioPositivos = sumaPositivo / cantidadPositivos;
+    }
+
+	if (flag == false)
 	{
 		document.write ("No ingresaste nada. ");
 	}
 	else 
 	{
-        promedioNegativos = sumaNegativo / cantidadNegativos;
-        promedioPositivos = sumaPositivo / cantidadPositivos;
         diferenciaPosNeg = promedioPositivos - promedioNegativos;
 
 		document.writeln (`Ingresaste ${cantidadPositivos} números positivos, su suma es: ${sumaPositivo}. <br>`);

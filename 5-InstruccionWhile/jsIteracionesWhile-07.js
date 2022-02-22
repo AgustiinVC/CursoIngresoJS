@@ -7,7 +7,7 @@ function mostrar()
 	let contador = 0;
 	let respuesta;
 	let suma = 0;
-	let promedio = 0;
+	let promedio;
 	let numeroIngresado;
 	let mensajeSuma;
 	let mensajePromedio;

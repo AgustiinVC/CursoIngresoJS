@@ -5,8 +5,8 @@ function mostrar()
 {
 	let numeroIngresado;
 	let respuesta;
-	let maximo = 0;
-	let minimo = 0;
+	let maximo;
+	let minimo;
 	let flag = 0;
 	let mensajeMaximo;
 	let mensajeMinimo;
