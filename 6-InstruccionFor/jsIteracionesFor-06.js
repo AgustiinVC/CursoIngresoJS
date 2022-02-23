@@ -8,7 +8,7 @@ function mostrar()
 	
 	document.write ("Los números pares son: <br>");
 
-	for (i=1; i<= numeroIngresado; i++)
+	for (let i = 1; i < (numeroIngresado + 1); i++)
 	{
 		if (i % 2 == 0)
 		{
@@ -16,7 +16,7 @@ function mostrar()
 			cantidadPares++
 		}
 	}
-	document.write ("Cantidad de números Pares: " + cantidadPares);
+	document.write ("Cantidad de números pares: " + cantidadPares);
 
 
 }//FIN DE LA FUNCIÓN

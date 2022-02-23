@@ -1,11 +1,12 @@
 function mostrar()
 {
 	let repeticiones;
+	let contador;
 
 	repeticiones = prompt ("Ingrese el número de repeticiones:");
 	repeticiones = parseInt (repeticiones);
 
-	for (let i = 0; i < repeticiones; i++)
+	for (contador = 0; contador < repeticiones; contador++)
 	{
 		document.write ("Hola UTN FRA <br>");
 	}

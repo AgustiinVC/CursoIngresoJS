@@ -17,6 +17,6 @@ function mostrar()
 		}
 	}
 
-	document.write ("Hay un total de:" + cantidadDivisores + "<br>");
+	document.write ("Hay un total de: " + cantidadDivisores + "<br>");
 
 }//FIN DE LA FUNCIÓN

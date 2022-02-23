@@ -7,7 +7,7 @@ function mostrar()
 	numeroIngresado = prompt ("Ingrese un número:");
 	numeroIngresado = parseInt (numeroIngresado);
 
-	for (i = 1; i <= numeroIngresado; i++)
+	for (let i = 1; i < (numeroIngresado + 1); i++)
 	{
 		if (numeroIngresado % i == 0)
 		{

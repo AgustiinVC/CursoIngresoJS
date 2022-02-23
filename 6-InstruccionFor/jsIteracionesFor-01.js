@@ -1,7 +1,8 @@
 function mostrar()
 {
-	for (let i = 1; i <= 10; i++)
+	let numero;
+	for (numero = 1; numero < 11; numero++)
 	{
-		document.writeln("Repeticion nro: " + i + "<br>");
+		document.writeln("Repeticion nro: " + numero + "<br>");
 	}
 }

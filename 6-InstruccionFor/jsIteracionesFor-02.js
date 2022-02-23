@@ -1,6 +1,7 @@
 function mostrar()
 {
-	for (let i=10; i >= 1; i--)
+	let numero;
+	for (numero=10; numero > 0; numero--)
 	{
 		document.writeln (`Repeticion número: ${i} <br>`);
 	}
