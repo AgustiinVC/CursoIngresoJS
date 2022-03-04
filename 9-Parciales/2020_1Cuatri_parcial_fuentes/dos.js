@@ -2,8 +2,7 @@
 Vallario Cores, Agustín
 Realizar el algoritmo que permita ingresar los datos de una compra productos de la construccion, hasta que el cliente quiera:
 Tipo validad("arena";"cal";"cemento")
-Cantidad de bolsas,
-Precio por bolsa (más de cero ),
+Cantidad de bolsas, Precio por bolsa (más de cero ),
 
 Si compro más de 10 bolsas en total tenes 15% de descuento sobre el total a pagar.
 Si compro más de 30 bolsas en total tenes 25% de descuento sobre el total a pagar.
@@ -19,10 +18,13 @@ function mostrar()
   let cantidadBolsa;
   let precioBolsa;
 
-  let tipoBolsaMaximo;
   let tipoBolsaCaro;
-  let cantidadBolsaMaximo;
   let precioBolsaCaro;
+
+  let cantidadArena = 0;
+  let cantidadCemento = 0;
+  let cantidadCal = 0;
+  let mayorCantidadProducto;
   
   let respuesta;
   let flagPrimerIngreso;
@@ -31,7 +33,7 @@ function mostrar()
   let importeConDescuento;
   let descuento;
   let totalBolsas = 0;
-  let mensaje = "";
+  let mensaje;
 
   flagPrimerIngreso = false;
   descuento = 0;
@@ -68,14 +70,13 @@ function mostrar()
       precioBolsa = parseInt (precioBolsa);
     }
 
-    // Valores maximos con el primer ingreso.
+    // Valores primer ingreso.
     if (flagPrimerIngreso == false)
     {
       flagPrimerIngreso = true;
 
-      tipoBolsaMaximo = tipoBolsa;
+      //tipo de bolsa para mayor precio
       tipoBolsaCaro = tipoBolsa;
-      cantidadBolsaMaximo = cantidadBolsa;
       precioBolsaCaro = precioBolsa;
     }
 
@@ -83,24 +84,48 @@ function mostrar()
     importeBruto += (cantidadBolsa * precioBolsa);
     totalBolsas += cantidadBolsa;
 
-    // Punto C
-    if (cantidadBolsa > cantidadBolsaMaximo)
-    {
-      tipoBolsaMaximo = tipoBolsa;
-      cantidadBolsaMaximo = cantidadBolsa;
-    }
-
-    //Punto D
+    // Punto D
     if (precioBolsa > precioBolsaCaro)
     {
-      precioBolsaCaro = precioBolsa;
       tipoBolsaCaro = tipoBolsa;
+      precioBolsaCaro = precioBolsa;
+    }
+
+    //Punto C (Contador de cantidad de cada tipo)
+    switch (tipoBolsa)
+    {
+      case "arena":
+        cantidadArena += cantidadBolsa;
+        break;
+
+      case "cal":
+        cantidadCal += cantidadBolsa;
+        break;
+
+      case "cemento":
+        cantidadCemento += cantidadBolsa;
+        break;
     }
 
     respuesta = prompt ("¿Quiere seguir ingresando productos?");
     respuesta = respuesta.toLowerCase();
   }
   while (respuesta == "si")
+
+  //Punto D parte 2 (averiguo cual es el mayor de los 3)
+  if (cantidadArena > cantidadCemento && cantidadArena > cantidadCal)
+  {
+    mayorCantidadProducto = cantidadArena;
+  }
+  else if (cantidadCal > cantidadArena && cantidadCal > cantidadCemento)
+  {
+    mayorCantidadProducto = cantidadCal;
+  }
+  else
+  {
+    mayorCantidadProducto = cantidadCemento;
+  }
+
 
   if (totalBolsas > 29)
   {
@@ -111,7 +136,7 @@ function mostrar()
     descuento = 15;
   }
 
-  mensaje += "El importe bruto es de: $" + importeBruto + "\n";
+  mensaje = "El importe bruto es de: $" + importeBruto + "\n";
 
   // Punto B
   if (descuento != 0)
@@ -120,7 +145,7 @@ function mostrar()
     mensaje += "El importe con descuento es de: $" + importeConDescuento + "\n";
   }
 
-  mensaje += "El tipo con mas cantidad de bolsas es: " + tipoBolsaMaximo + "\n";
+  mensaje += "El tipo con mas cantidad de bolsas es: " + mayorCantidadProducto + "\n";
   mensaje += "El tipo con bolsas a mayor precio: " + tipoBolsaCaro;
 
   alert (mensaje);
